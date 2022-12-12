@@ -51,7 +51,7 @@ describe("anchor-hello-friends", () => {
 
     const messageList = accountAfter.messageList;
     assert.equal(messageList[0].message, message);
-    assert.equal(messageList[0].user, true);
+    assert.equal(messageList[0].user.equals(user), true);
     assert.equal(messageList[0].timestamp.gt(new anchor.BN(0)), true);
   });
 });
